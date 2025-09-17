@@ -63,17 +63,21 @@
     overflow:hidden;
     position:relative;
   }
-  .marquee .track{
-    display:inline-block;
-    white-space:nowrap;
-    will-change:transform;
-    animation:scroll 12s linear infinite;
-  }
-  @keyframes scroll{
-    0%{transform:translateX(100%);}
-    100%{transform:translateX(-100%);}
-  }
-
+  .marquee {
+  overflow: hidden;
+  position: relative;
+}
+.marquee .track {
+  display: block;
+  min-width: 100%;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll 12s linear infinite;
+}
+@keyframes scroll {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
   .hero {
     display:grid;
     grid-template-columns: 1fr 380px;
@@ -194,7 +198,7 @@
 
         <h3 style="margin-top:18px;color:#fff">Unsere Highlights</h3>
         <ul style="text-align:left;color:#ddd;line-height:1.6;padding-left:18px;">
-          <li>Highspeed-WLAN (bis zu 500 Mbit)</li>
+          <li>Highspeed-WLAN (bis zu 200 Mbit)</li>
           <li>Leistungsstarke Gaming-PCs und gemütliche Arbeitsplätze</li>
           <li>Frisch gebackene Snacks und Spezialitätenkaffee</li>
         </ul>
@@ -234,6 +238,7 @@
   </div>
 </body>
 </html>
+
 
 
 
