@@ -1,12 +1,155 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Speisekarte - Altstadt Bytes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Öffnungszeiten – Altstadt Bytes</title>
+  <style>
+    :root{
+      --pink:#ff69b4;
+      --pink-2:#ff85c0;
+      --black:#000;
+      --bg1:#f6f0ef;
+      --card-bg:rgba(0,0,0,0.55);
+      --glass: rgba(255,255,255,0.06);
+    }
+    body{
+      margin:0;
+      font-family:Inter, system-ui, Arial, sans-serif;
+      background: linear-gradient(180deg,#0f0f11 0%, #1b1b1f 100%);
+      color:#eee;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    .site {
+      max-width:1080px;
+      margin:32px auto;
+      padding:24px;
+    }
+    header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand {
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo {
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#111;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg,var(--pink),#8b2a70);
+      box-shadow:0 6px 18px rgba(0,0,0,0.6);
+    }
+    .logo img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .logo .fallback {
+      display:none;
+      position:absolute;
+      inset:0;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#111;
+      background:linear-gradient(135deg,var(--pink),#8b2a70);
+    }
+    h1.site-title{margin:0;font-size:20px;color:var(--pink);letter-spacing:0.4px;}
+    p.tagline{margin:0;color:#ccc;font-size:13px;}
+    nav {
+      display:flex; gap:10px;
+    }
+    .btn{
+      background:var(--pink);
+      color:#111;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      border:2px solid rgba(0,0,0,0.5);
+      box-shadow:0 6px 14px rgba(139,42,112,0.18);
+      margin-left:0;
+      margin-right:0;
+    }
+    .btn.secondary{
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.08);
+      font-weight:600;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      padding:18px;
+      border-radius:12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+      margin-bottom:20px;
+    }
+    footer{margin-top:26px;color:#888;font-size:13px;text-align:center;}
+    @media (max-width:900px){
+      .site{padding:10px;}
+      header{flex-direction:column;align-items:flex-start;}
+      .brand .logo{width:48px;height:48px}
+    }
+  </style>
 </head>
 <body>
-  <h1>Öffnungszeiten</h1>
-  <p>Montag,Dienstag,Mittwoch,Donnerstag,Freitag und Samstag</p>
-  <a href="index.html">Zurück zur Startseite</a>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <img
+            src="https://raw.githubusercontent.com/Rxckzs/BytesCafee/main/Screenshot%202025-09-16%20085612.png"
+            alt="Altstadt Bytes Logo"
+            onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='flex';"
+          >
+          <div class="fallback" style="display:none;">AB</div>
+        </div>
+        <div>
+          <h1 class="site-title">Altstadt Bytes</h1>
+          <p class="tagline">Internet-Café • Schnelles WLAN • Freundlicher Service</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="index.html">Startseite</a>
+        <a class="btn" href="menu.html">Speisekarte</a>
+        <a class="btn" href="preise.html">Preise</a>
+        <a class="btn secondary" href="tiktok.html">Unser TikTok</a>
+        <a class="btn secondary" href="zeiten.html">Öffnungszeiten</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Öffnungszeiten</h2>
+        <!-- EDIT BELOW: Your opening hours and info goes here -->
+        <table style="width:100%;color:#fff;font-size:1.1em;margin-bottom:18px;">
+          <tr><td><strong>Montag–Sonntag:</strong></td><td>10:00 – 22:00 Uhr</td></tr>
+          <!-- Add more rows for special days if needed -->
+        </table>
+        <p>Feiertags können die Öffnungszeiten variieren. Für aktuelle Infos bitte anrufen oder auf Social Media schauen.</p>
+        <!-- END EDIT -->
+      </div>
+      <a href="index.html" class="btn secondary">Zurück zur Startseite</a>
+    </main>
+
+    <footer>
+      <p>© 2025 Altstadt Bytes — Erstellt von J, M und S. Alle Links, Adressen, Telefonnummern und Standorte sind fiktiv.</p>
+    </footer>
+  </div>
 </body>
 </html>
