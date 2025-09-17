@@ -13,20 +13,27 @@
     --card-bg:rgba(0,0,0,0.55);
     --glass: rgba(255,255,255,0.06);
   }
-  body{
-    margin:0;
-    font-family:Inter, system-ui, Arial, sans-serif;
-    background: linear-gradient(180deg,#0f0f11 0%, #1b1b1f 100%);
-    color:#eee;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
+  html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
-  .site {
-    max-width:1080px;
-    margin:32px auto;
-    padding:24px;
-  }
+body {
+  min-height: 100vh;
+  height: 100%;
+  background: linear-gradient(180deg, #0f0f11 0%, #1b1b1f 100%);
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #eee;
+}
+
+.site {
+  max-width: 1080px;
+  margin: 32px auto;
+  padding: 24px;
+  min-height: 100vh;
+}
 
   header {
     display:flex;
@@ -238,6 +245,7 @@
   </div>
 </body>
 </html>
+
 
 
 
